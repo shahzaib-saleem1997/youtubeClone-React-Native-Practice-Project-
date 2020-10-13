@@ -16,7 +16,8 @@ import cache from "../utility/cache";
 
 import MiniCard from "../components/MiniCard";
 
-//https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=songs&type=video&key=AIzaSyA6kpQxZ8-EKTRJvv7q9e6rCi189y8yHyU
+
+
 
 export default function Search({navigation}) {
   const [searchText, setSearchText] = useState("");
@@ -31,7 +32,7 @@ export default function Search({navigation}) {
   const fetchData = () => {
     setLoading(true);
     fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchText}&type=video&key=AIzaSyA6kpQxZ8-EKTRJvv7q9e6rCi189y8yHyU`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchText}&type=video&key={yourKey}`
     )
       .then((res) => res.json())
       .then((data) => {
